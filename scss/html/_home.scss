@@ -2,248 +2,94 @@
 @import "../utilidades/variables";
 
 
-// estilos generales
-// estilos generales
-// estilos generales
-.cuerpo {
-    background-color: $color-principalbg;
+// estilos generales del header y main
+
+  @font-face {
+    font-family: "chakra";
+    src: url("../scss/font/chakra/ChakraPetch-Bold.ttf") format("truetype");
   }
-  
-  // estilo del nav bar
+
+
+  .cuerpo {
+    background-image: url(../img/bg_index.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $color-principalfont;
+    font-family: $family-font;
+
+    // Estilos para tablets
+    @media (min-width: 768px) and (max-width: 1024px) {
+      background-size: 100vw 200vh;
+    }
+  }
+
+
+  .navbar-brand {
+    color: $color-principalfont;
+  }
+
   .navbar-nav {
     .nav-link {
       color: $color-principalfont;
+      
     }
   }
-  
+
   .nav-item:hover {
     background-color: $background-hover;
-    color: rgb(255, 255, 255);
+    color: $color-principalfont;
     border-radius: 5px;
   }
-  
-  // estilos de pantallas de celulares
-  // - estilos del main
-    
-.pagina_principal {
-    h1 {
-        font-size: $tamano-titulo;
-        margin-left: $margenizq;
-        color: $color-principalfont;
-      }
-  
-    h2 {
-        font-size: $tamano-subtitulo;
-        margin-left: $margenizq;
-        color: $color-subtitulos;
-      }
-  
-    p {
-        font-size: 40px;
-        margin-left: $margenizq;
-        color: $color-principalfont
-      }
-    }
-main {
-        height: 80vh;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 25%);
-        gap: 0.5rem;
-        margin: 3rem 3rem 3rem 3rem;
-    div {
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-    }
- 
-  
-  // estilos del carrusel del portafolio
-  .carousel-inner img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .contenido_portafolio {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  
-    h2 {
-      padding: 1rem;
-      font-size: 25px;
-      color: $color-principalfont;
-      text-align: center;
-    }
-  
-    p {
-      padding: 1rem;
-      font-size: 16px;
-      color: $color-principalfont;
-      text-align: center;
-    }
-  }
-  
-  // estilos del "sobre nosotros"
-  .sn-titulo h1 {
-    font-size: 20px;
-    margin-left: $margenizq;
-    color: $color-subtitulos;
-  }
-  
-  .sn-contenido img {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-  }
-  
-  /* - estilos de contenido de SN*/
 
-.sn-contenido {
-    p {
-      padding: 1rem;
-      font-size: 16px;
-      color: $color-principalfont;
-      text-align: justify;
-    }
-  
-    img {
-      width: 100%;
-      display: grid;
-      grid-template-columns:1fr ;
-      grid-template-rows:1fr ;  
-      text-align: justify;
-    }
-  }
-  
-  /* - estilos de RRSS*/
-  
-  .Card {
-    padding: 3rem;
-    width: 100%;
+  main {
     display: grid;
-    grid-template-columns: 1fr;
-    text-align: justify;
-    color: $color-principalfont;
-  }
-  
-  /* - estilo de contactos*/
-  
-  .mb-3 {
-    padding: 2rem;
-    color: $color-principalfont;
-  }
-  
-  /* mq de tablet*/
-  
-  @media screen and (min-width: 600px) {
-    /* estilos de main*/
-  
-    main {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 50%);
+    grid-template-columns: 1;
+    grid-template-rows: 2;
+    background-color: $color-principalbg;
+    padding: 4rem;
+    margin: 4rem;
+    border-radius: 10px;
+
+    h1 {
+      color: $color-principalfont;
     }
-  
-    .d-block .w-100 {
-      width: 50%;
+
+    h2 {
+      color: $color-subtitulos;
     }
-  
-    /*estilos del carrusel del portafolio*/
-  
-    .carousel-item {
-      text-align: center;
+
+    // Estilos para tablets
+    @media (max-width: 768px) {
+      padding: 2rem;
+      margin: 2rem;
+      background-size: cover;
     }
-  
-    .contenido_portafolio {
-      h3 {
-        padding: 1rem;
-        font-size: 30px;
-        color: rgb(197, 197, 190);
-        text-align: center;
-      }
-  
-      h4 {
-        padding: 1rem;
-        font-size: 20px;
-        color: rgb(197, 197, 190);
-        text-align: center;
-      } 
-    }
-  
-    /* estilos del "sobre nosotros*/
-  
-    .sn-contenido {
-      img {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        text-align: justify;
-      }
-      
-      p {
-        padding: 1rem;
-        font-size: 24px;
-        color: rgb(197, 197, 190);
-        text-align: justify;
-      }
-    }
-  
-    /* estilos del "RRSS*/
-  
-    .Card {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+    // Estilos para celulares
+    @media (max-width: 480px) {
+      padding: 1rem;
+      margin: 1rem;
+      background-size: cover;
     }
   }
-  
-  /* mq de pantallas de escritorio*/
-  
-  @media screen and (min-width: 1024px) {
-    /*estilos del main de escritorio*/
-  
-    main {
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 1fr;
-    }
-  
-    .nature, .coin {
-      grid-row: span 1;
-    }    
-  
-    /*estilos del carrusel del portafolio*/
-  
-    .carousel-item {
-      text-align: center;
-      width: 60%;
-    }
-  
-    .sn-contenido {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-          
-      img {
-        width: 100%;
-        grid-column: 1; 
-        grid-row: 1; 
-      }
-        
-      p {
-        grid-column: 2; 
-        grid-row: 1; 
-        text-align: left; 
-      }
-    }
-  }
-  
-  /* estilos de footer*/
-  
+
+
+  // estilos de footer
+
   footer {
+    text-align: center;
+
     p {
-      text-align: center;
-      color: whitesmoke;
+      color: $color-principalfont;
+    }
+
+    // Estilos para tablets y celulares
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 12px;
     }
   }
-  
+

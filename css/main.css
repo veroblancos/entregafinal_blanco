@@ -4,163 +4,205 @@
   padding: 0;
   box-sizing: border-box; }
 
+@font-face {
+  font-family: "chakra";
+  src: url("../scss/font/chakra/ChakraPetch-Bold.ttf") format("truetype"); }
+
 .cuerpo {
-  background-color: #0f0f0f; }
+  background-image: url(../img/bg_index.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #131313;
+  font-family: "chakra"; }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .cuerpo {
+      background-size: 100vw 200vh; } }
+
+.navbar-brand {
+  color: #131313; }
 
 .navbar-nav .nav-link {
-  color: aliceblue; }
+  color: #131313; }
 
 .nav-item:hover {
-  background-color: #ff00f7;
-  color: white;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #131313;
   border-radius: 5px; }
 
-.pagina_principal h1 {
-  font-size: 30px;
-  margin-left: 1rem;
-  color: aliceblue; }
-
-.pagina_principal h2 {
-  font-size: 25px;
-  margin-left: 1rem;
-  color: #ff00cc; }
-
-.pagina_principal p {
-  font-size: 40px;
-  margin-left: 1rem;
-  color: aliceblue; }
-
 main {
-  height: 80vh;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 25%);
-  gap: 0.5rem;
-  margin: 3rem 3rem 3rem 3rem; }
-  main div img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
+  grid-template-columns: 1;
+  grid-template-rows: 2;
+  background-color: white;
+  padding: 4rem;
+  margin: 4rem;
+  border-radius: 10px; }
+  main h1 {
+    color: #131313; }
+  main h2 {
+    color: #6600ff; }
+  @media (max-width: 768px) {
+    main {
+      padding: 2rem;
+      margin: 2rem;
+      background-size: cover; } }
+  @media (max-width: 480px) {
+    main {
+      padding: 1rem;
+      margin: 1rem;
+      background-size: cover; } }
 
-.carousel-inner img {
-  width: 100%;
-  height: auto; }
+footer {
+  text-align: center; }
+  footer p {
+    color: #131313; }
+  @media (max-width: 768px) {
+    footer {
+      font-size: 14px; } }
+  @media (max-width: 480px) {
+    footer {
+      font-size: 12px; } }
 
-.contenido_portafolio {
-  font-family: Verdana, Geneva, Tahoma, sans-serif; }
-  .contenido_portafolio h2 {
-    padding: 1rem;
-    font-size: 25px;
-    color: aliceblue;
-    text-align: center; }
-  .contenido_portafolio p {
-    padding: 1rem;
-    font-size: 16px;
-    color: aliceblue;
-    text-align: center; }
-
-.sn-titulo h1 {
-  font-size: 20px;
-  margin-left: 1rem;
-  color: #ff00cc; }
-
-.sn-contenido img {
-  width: 100%;
+.main-portafolio {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr; }
+  grid-template-columns: 1;
+  grid-template-rows: auto;
+  background-color: white;
+  padding: 4rem;
+  margin: 4rem;
+  border-radius: 10px; }
+  .main-portafolio .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem; }
+    .main-portafolio .section .image-left {
+      margin-right: 1rem;
+      border-radius: 15px;
+      max-width: 100%; }
+    .main-portafolio .section .text-left {
+      text-align: left;
+      font-size: 30px; }
+  @media (max-width: 1024px) {
+    .main-portafolio {
+      grid-template-rows: auto;
+      padding: 2rem;
+      margin: 2rem; }
+      .main-portafolio .section {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem; }
+        .main-portafolio .section .image-left {
+          margin-right: 0;
+          margin-bottom: 1rem;
+          order: 1; }
+        .main-portafolio .section .text-left {
+          font-size: 20px;
+          text-align: center;
+          order: 2; } }
 
-/* - estilos de contenido de SN*/
-.sn-contenido p {
-  padding: 1rem;
-  font-size: 16px;
-  color: aliceblue;
-  text-align: justify; }
-
-.sn-contenido img {
-  width: 100%;
+.sobrenosotros {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  text-align: justify; }
-
-/* - estilos de RRSS*/
-.Card {
-  padding: 3rem;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  text-align: justify;
-  color: aliceblue; }
-
-/* - estilo de contactos*/
-.mb-3 {
-  padding: 2rem;
-  color: aliceblue; }
-
-/* mq de tablet*/
-@media screen and (min-width: 600px) {
-  /* estilos de main*/
-  main {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 50%); }
-  .d-block .w-100 {
-    width: 50%; }
-  /*estilos del carrusel del portafolio*/
-  .carousel-item {
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  padding: 4rem;
+  margin: 4rem;
+  border-radius: 10px; }
+  .sobrenosotros .sn-titulo {
+    grid-column: 1 / -1;
     text-align: center; }
-  .contenido_portafolio h3 {
-    padding: 1rem;
-    font-size: 30px;
-    color: #c5c5be;
-    text-align: center; }
-  .contenido_portafolio h4 {
-    padding: 1rem;
-    font-size: 20px;
-    color: #c5c5be;
-    text-align: center; }
-  /* estilos del "sobre nosotros*/
-  .sn-contenido img {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    text-align: justify; }
-  .sn-contenido p {
-    padding: 1rem;
-    font-size: 24px;
-    color: #c5c5be;
-    text-align: justify; }
-  /* estilos del "RRSS*/
-  .Card {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); } }
-
-/* mq de pantallas de escritorio*/
-@media screen and (min-width: 1024px) {
-  /*estilos del main de escritorio*/
-  main {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr; }
-  .nature, .coin {
-    grid-row: span 1; }
-  /*estilos del carrusel del portafolio*/
-  .carousel-item {
-    text-align: center;
-    width: 60%; }
-  .sn-contenido {
-    display: grid;
-    grid-template-columns: 1fr 1fr; }
-    .sn-contenido img {
+    .sobrenosotros .sn-titulo h1 {
+      color: #131313; }
+  .sobrenosotros .sn-contenido {
+    display: flex;
+    align-items: center; }
+    .sobrenosotros .sn-contenido .img-sn {
+      margin-right: 1rem;
+      max-width: 100%;
+      height: auto; }
+    .sobrenosotros .sn-contenido .p-sn {
+      text-align: left; }
+  @media (max-width: 1024px) {
+    .sobrenosotros {
+      grid-template-columns: 1fr;
+      padding: 2rem;
+      margin: 2rem; }
+      .sobrenosotros .sn-titulo {
+        text-align: left; }
+        .sobrenosotros .sn-titulo h1 {
+          color: #131313;
+          font-size: 2rem; }
+      .sobrenosotros .sn-contenido {
+        flex-direction: column;
+        align-items: center; }
+        .sobrenosotros .sn-contenido .img-sn {
+          margin-right: 0;
+          margin-bottom: 1rem; }
+        .sobrenosotros .sn-contenido .p-sn {
+          text-align: left; } }
+  @media (max-width: 768px) {
+    .sobrenosotros .sn-titulo h1 {
+      font-size: 1.5rem; }
+    .sobrenosotros .sn-contenido .img-sn {
       width: 100%;
-      grid-column: 1;
-      grid-row: 1; }
-    .sn-contenido p {
-      grid-column: 2;
-      grid-row: 1;
-      text-align: left; } }
+      height: auto; }
+    .sobrenosotros .sn-contenido .p-sn {
+      font-size: 1rem; } }
 
-/* estilos de footer*/
-footer p {
-  text-align: center;
-  color: whitesmoke; }
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem; }
+  .card .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; }
+  .card .social-button {
+    background-color: #6600ff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    flex: 1 0 calc(50% - 2rem); }
+  .card img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem; }
+  @media (max-width: 768px) {
+    .card .social-button {
+      flex: 1 0 100%; } }
+
+.main-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  .main-contacto form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    .main-contacto form textarea {
+      width: 30rem;
+      height: 10rem;
+      padding: 0.5rem;
+      margin-bottom: 1rem; }
+  @media (max-width: 1024px) {
+    .main-contacto {
+      align-items: center; }
+      .main-contacto form {
+        width: 80%; }
+        .main-contacto form textarea {
+          width: 100%; } }
+  @media (max-width: 768px) {
+    .main-contacto form {
+      width: 90%; }
+      .main-contacto form textarea {
+        width: 100%;
+        height: 8rem; } }
+  @media (max-width: 480px) {
+    .main-contacto form {
+      width: 100%; }
+      .main-contacto form textarea {
+        width: 100%;
+        height: 6rem; } }

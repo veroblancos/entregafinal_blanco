@@ -1,30 +1,47 @@
 //comentarios en SASS
+//font
+
+
+$family-font:"chakra";
+
 
 //color de fondo 
-$color-principalbg: rgb(15, 15, 15);
+$color-principalbg: rgb(255, 255, 255);
 
 //color fuente nav
 
-$color-principalfont: aliceblue;
+$color-principalfont: rgb(19, 19, 19);
 
 // color de subtitulos
 
-$color-subtitulos:  rgb(255, 0, 204);
+$color-subtitulos:  rgb(102, 0, 255);
 
 //color de hover
-$background-hover: rgb(255, 0, 247);
+$background-hover: rgba(255, 255, 255, 0.8);
 
 //tamaño de fuente titulo
 
-$tamano-titulo: 30px;
+$tamano-titulo: 40px;
 
 //tamaño de fuente subtitulo
 
-$tamano-subtitulo: 25px;
+$tamano-subtitulo: 20px;
 
 //margen izquierdo
 
 $margenizq: 1rem;
+
+//tamaño de letras de parrafos
+
+$tamaño-parrafo: 18px;
+
+//color de botones
+$colorbotones: rgb(102, 0, 255);
+
+//color letra botones
+
+$colorletrabotones: rgb(255, 255, 255);
+
 
 
     

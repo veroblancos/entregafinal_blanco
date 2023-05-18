@@ -1,0 +1,85 @@
+//variables
+@import "../utilidades/variables";
+
+.sobrenosotros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $color-principalbg;
+  padding: 4rem;
+  margin: 4rem;
+  border-radius: 10px;
+
+  .sn-titulo {
+    grid-column: 1 / -1;
+    text-align: center;
+
+    h1 {
+      color: $color-principalfont;
+    }
+  }
+
+  .sn-contenido {
+    display: flex;
+    align-items: center;
+
+    .img-sn {
+      margin-right: 1rem;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .p-sn {
+      text-align: left;
+    }
+  }
+
+  // Estilos para tablets y celulares
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr; // Cambio en el número de columnas
+    padding: 2rem;
+    margin: 2rem;
+
+    .sn-titulo {
+      text-align: left;
+
+      h1 {
+        color: $color-principalfont;
+        font-size: 2rem; 
+      }
+    }
+
+    .sn-contenido {
+      flex-direction: column; 
+      align-items: center;
+
+      .img-sn {
+        margin-right: 0;
+        margin-bottom: 1rem; 
+      }
+
+      .p-sn {
+        text-align: left; 
+      }
+    }
+  }
+
+  // Estilos para celulares
+  @media (max-width: 768px) {
+    .sn-titulo {
+      h1 {
+        font-size: 1.5rem; 
+      }
+    }
+
+    .sn-contenido {
+      .img-sn {
+        width: 100%; 
+        height: auto; 
+      }
+
+      .p-sn {
+        font-size: 1rem; 
+      }
+    }
+  }
+}

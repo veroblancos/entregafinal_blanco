@@ -1,0 +1,40 @@
+//variables
+@import "../utilidades/variables";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .social-button {
+    background-color: $colorbotones;
+    color: $colorletrabotones;
+    border: none;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    flex: 1 0 calc(50% - 2rem); 
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .social-button {
+      flex: 1 0 100%; 
+    }
+  }
+}
+
+  
+  

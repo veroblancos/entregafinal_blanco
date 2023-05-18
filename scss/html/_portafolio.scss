@@ -1,0 +1,55 @@
+//variables
+@import "../utilidades/variables";
+
+.main-portafolio {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: auto;
+  background-color: $color-principalbg;
+  padding: 4rem;
+  margin: 4rem;
+  border-radius: 10px;
+
+  .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    .image-left {
+      margin-right: 1rem;
+      border-radius: 15px;
+      max-width: 100%;
+    }
+    
+    .text-left {
+      text-align: left;
+      font-size: $tamano-subtitulo * 1.5;
+    }
+  }
+
+  // Estilos para tablets y celulares
+  @media (max-width: 1024px) {
+    grid-template-rows: auto;
+    padding: 2rem;
+    margin: 2rem;
+    
+    .section {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+      
+      .image-left {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        order: 1; 
+      }
+      
+      .text-left {
+        font-size: $tamano-subtitulo;
+        text-align: center;
+        order: 2; 
+      }
+    }
+  }
+}
