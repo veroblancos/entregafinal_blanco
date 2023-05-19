@@ -1,59 +1,55 @@
-//variables
-@import "../utilidades/variables";
- 
-//estilos de contactos
+.main-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  min-height: 100vh; // Esto garantizará que tu contenedor principal tenga al menos la altura de la ventana del navegador.
 
-  .main-contacto {
+  form {
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
 
+    textarea {
+      width: 30rem; 
+      height: 10rem; 
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (max-width: 1024px) { 
+    align-items: center;
 
     form {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start; 
+      width: 80%; 
 
       textarea {
-        width: 30rem; 
-        height: 10rem; 
-        padding: 0.5rem;
-        margin-bottom: 1rem;
-      }
-    }
-
-    @media (max-width: 1024px) { 
-      align-items: center;
-
-      form {
-        width: 80%; 
-
-        textarea {
-          width: 100%; 
-        }
-      }
-    }
-  // Estilos tablets
-    @media (max-width: 768px) { 
-      form {
-        width: 90%; 
-
-        textarea {
-          width: 100%; 
-          height: 8rem; 
-        }
-      }
-    }
-
-    // Estilos para celulares
-    @media (max-width: 480px) { 
-      form {
         width: 100%; 
-
-        textarea {
-          width: 100%; 
-          height: 6rem; 
-        }
       }
     }
   }
+
+  // Estilos tablets
+  @media (max-width: 768px) { 
+    form {
+      width: 90%; 
+
+      textarea {
+        width: 100%; 
+        height: 8rem; 
+      }
+    }
+  }
+
+  // Estilos para celulares
+  @media (max-width: 480px) { 
+    form {
+      width: 100%; 
+
+      textarea {
+        width: 100%; 
+        height: 6rem; 
+      }
+    }
+  }
+}
